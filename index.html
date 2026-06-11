@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Meta tags for social media banners -->
+  <meta name="description" content="DataDet is a cloud-edge collaborative framework for high-quality distracted driving detection without manually annotated training data.">
+  <meta property="og:title" content="No Manual Annotation: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration"/>
+  <meta property="og:description" content="DataDet enables annotation-free distracted driving detection through edge-side event mining, cloud-side agent annotation, and real-time lightweight edge deployment."/>
+  <meta property="og:image" content="static/images/social_preview.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="No Manual Annotation: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration">
+  <meta name="twitter:description" content="DataDet enables annotation-free distracted driving detection through cloud-edge collaboration.">
+  <meta name="twitter:image" content="static/images/social_preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="keywords" content="distracted driving detection, cloud-edge collaboration, pseudo-labeling, vision-language model, edge AI, YOLO, driver monitoring">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DataDet: Annotation-Free Distracted Driving Detection via Cloud–Edge Collaboration</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/safe.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>
+    .icon-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.6rem 1.2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-card img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .icon-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: #222222;
+    }
+
+    .icon-card p {
+      font-size: 1rem;
+      line-height: 1.45;
+      color: #4a4a4a;
+      max-width: 260px;
+    }
+
+    .supplementary-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .publication-title {
+      line-height: 1.18;
+    }
+
+    .author-block {
+      margin-left: 0.15rem;
+      margin-right: 0.15rem;
+    }
+
+    .title-author-container {
+      max-width: 1700px !important;
+      width: 96%;
+    }
+
+    .affiliation-block {
+      margin-top: 0.8rem;
+      line-height: 1.45;
+    }
+
+    .email-block {
+      margin-top: 0.8rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .pipeline-slide {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .pipeline-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .pipeline-caption {
+      margin-top: 0.9rem;
+      font-size: 1.25rem;
+      line-height: 1.75;
+      color: #4a4a4a;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .supplementary-highlight {
+      border: 2px solid #363636;
+      border-radius: 18px;
+      padding: 1.25rem;
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+    }
+
+    .supplementary-note {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: #4a4a4a;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Title and authors -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-fullhd title-author-container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-1 publication-title">
+              No Manual Annotation: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Ke Chen<sup>1</sup>,</span>
+              <span class="author-block">Jiandian Zeng<sup>2</sup>,</span>
+              <span class="author-block">Entao Luo<sup>3</sup>,</span>
+              <span class="author-block">Zihao Peng<sup>2</sup>,</span>
+              <span class="author-block">Guo Li<sup>2</sup>,</span>
+              <span class="author-block">Jianxiong Guo<sup>2</sup>,</span>
+              <span class="author-block">Tian Wang<sup>4</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors affiliation-block">
+              <span class="author-block">
+                <sup>1</sup>Department of Big Data, Faculty of Arts and Sciences, Beijing Normal University, Zhuhai, Guangdong, China
+              </span><br>
+              <span class="author-block">
+                <sup>2</sup>Institute of Artificial Intelligence and Future Networks, Beijing Normal University, Zhuhai, Guangdong, China
+              </span><br>
+              <span class="author-block">
+                <sup>3</sup>Information Engineering, Hunan University of Science and Engineering, Yongzhou, Hunan, China
+              </span><br>
+              <span class="author-block">
+                <sup>4</sup>Engineering Research Center of Cloud-Edge Intelligent Collaboration on Big Data, Ministry of Education, Beijing Normal University, Zhuhai, Guangdong, China
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors email-block">
+              <span class="author-block">
+                {kechen, pzh_cs, liguo}@mail.bnu.edu.cn,
+                {jiandian, jianxiongguo, tianwang}@bnu.edu.cn,
+                entaoluo@huse.edu.cn
+              </span>
+            </div>
+
+            <!-- Supplementary material button -->
+            <div class="column has-text-centered" style="margin-top: 1rem;">
+              <div class="publication-links">
+
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary Material</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Supplementary material PDF placed at the front -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-widescreen">
+        <div class="supplementary-highlight">
+          <h2 class="title is-3 has-text-centered">Supplementary Material</h2>
+
+
+          <div class="has-text-centered" style="margin-bottom: 1rem;">
+            <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+               class="external-link button is-medium is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Open Supplementary PDF in New Tab</span>
+            </a>
+          </div>
+
+          <div class="supplementary-box">
+            <iframe src="static/pdfs/supplementary_material.pdf" width="100%" height="820">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End supplementary material PDF placed at the front -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+
+          <div class="content has-text-justified" style="font-size: 1.25rem; line-height: 1.75;">
+            <p>
+In-vehicle driver monitoring is an important component of intelligent transportation systems, where distracted driving detection plays a key role in improving driving safety. Existing methods usually rely on supervised training with manually annotated datasets. However, continuous driving videos are massive and highly redundant, while distracted behaviors are sparse, fine-grained, and dependent on hand-object interactions. This makes large-scale manual annotation costly and limits the deployment of lightweight edge detectors. Although Vision Language Models (VLMs) can exploit unlabeled visual data, directly applying them to online in-vehicle inference is impractical due to high latency and computational cost. To address these challenges, we propose DataDet, a cloud-edge collaborative framework that enables accurate and efficient distracted driving detection without relying on manually annotated training data. On the edge side, DataDet distills task-relevant segmentation knowledge from a powerful segmentation model into a lightweight model, enabling it to mine informative high-risk events from continuous video streams and reduce redundant uploads. On the cloud side, an agent-based workflow performs structured hand-centric annotation and verification to generate reliable pseudo-labels. The resulting pseudo-labeled data are used to train a lightweight detector and redeploy it to the edge, thereby enabling efficient distracted driving recognition without manually annotated datasets. Experiments on RGB and IR driving data validate the effectiveness of DataDet in mining high-value events, generating reliable pseudo labels, and training lightweight edge detectors. The results further show that DataDet achieves accurate real-time distracted driving detection under limited annotation, bandwidth, and onboard computation resources.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- DataDet pipeline carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <h2 class="title is-3">DataDet Pipeline</h2>
+
+        <figure class="pipeline-slide" style="margin-bottom: 2rem;">
+          <img
+            src="static/images/m2.png"
+            alt="Overview of the proposed DataDet cloud-edge framework."
+          />
+          <figcaption class="pipeline-caption">
+            Overview of the proposed DataDet cloud-edge system for distracted driving detection. The edge device monitors the in-cabin video and sends only high-risk candidate frames to the cloud. In the cloud, strong detectors and a VLM-based agent automatically annotate these frames and train a lightweight detector. The trained detector is then deployed back to the edge for real-time inference.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+  <!-- End DataDet pipeline carousel -->
+
+  <!-- Edge mining video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Edge-side Distracted Frame Mining Using YOLO26n-Seg</h2>
+
+        <div id="mining-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="mining-video-rgb" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/A1_gE_29_s2_2019-03-15T13;42;24+01;00_rgb_body.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video2">
+            <video poster="" id="mining-video-ir" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/A2_gB_10_s1_2019-03-11T15;24;54+01;00_ir_body.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End edge mining video carousel -->
+
+  <!-- RGB video carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">RGB Scenario: Real-time Detection Demo of the Edge-side YOLO26n Model</h2>
+
+        <div id="rgb-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="rgb-video-1" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/B3_gZ_35_s2_2019-04-09T12;50;14+02;00_rgb_body.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video2">
+            <video poster="" id="rgb-video-2" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/B1_gF_24_s1_2019-03-04T15;26;10+01;00_rgb_body.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video3">
+            <video poster="" id="rgb-video-3" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/B2_gZ_32_s2_2019-04-08T16;28;10+02;00_rgb_body.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End RGB video carousel -->
+
+  <!-- IR video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">IR Scenario: Real-time Detection Demo of the Edge-side YOLO26n Model</h2>
+
+        <div id="ir-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="ir-video-1" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/C3_gZ_36_s2_2019-04-09T10;39;38+02;00_ir_body.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video2">
+            <video poster="" id="ir-video-2" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/C1_gF_23_s2_2019-03-05T10;09;12+01;00_ir_body.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video3">
+            <video poster="" id="ir-video-3" controls muted loop height="100%" preload="metadata">
+              <source src="static/videos/C2_gZ_34_s1_2019-04-08T12;25;28+02;00_ir_body.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End IR video carousel -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This website presents supplementary materials and visual demonstrations for DataDet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
