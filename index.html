@@ -257,16 +257,17 @@
 
           <div class="content has-text-justified" style="font-size: 1.25rem; line-height: 1.75;">
             <p>
-              Distracted driving detection is essential for in-vehicle monitoring, but training lightweight detectors typically requires costly manual annotations.
-              Continuous driving videos contain extensive redundancy, while distracted behaviors are sparse, fine-grained, and dependent on hand-object interactions.
-              Vision language models can exploit unlabeled data, yet their computational cost limits continuous online inference in vehicles.
-              We propose DataDet, a cloud-edge collaborative framework that constructs training data from unlabeled driving streams and deploys lightweight detectors for real-time recognition.
-              At the edge, task-relevant segmentation knowledge is transferred from a foundation model to a lightweight model, which identifies hand and steering-wheel regions and mines candidate high-risk events to reduce redundant uploads.
-              In the cloud, an agent performs structured hand-centric annotation and verification to generate reliable pseudo-labels.
-              These labels train a lightweight detector that is optimized and redeployed to the edge.
-              Experiments on visible-light and infrared driving data evaluate event mining, pseudo-label quality, detector performance, and deployment efficiency.
-              The results demonstrate effective training without manually annotated behavior labels, substantial upload reduction, and real-time edge inference.
-              Comparisons across annotators and detector architectures, iterative updates, and component ablations further examine the factors affecting data quality and recognition performance.
+              In-vehicle driver monitoring is an important component of intelligent transportation systems, where distracted driving detection plays a key role in improving driving safety.
+              Existing methods usually rely on supervised training with manually annotated datasets.
+              However, continuous driving videos are massive and highly redundant, while distracted behaviors are sparse, fine-grained, and dependent on hand-object interactions.
+              This makes large-scale manual annotation costly and limits the deployment of lightweight edge detectors.
+              Although vision language models can exploit unlabeled visual data, directly applying them to online in-vehicle inference is impractical due to high latency and computational cost.
+              To address these challenges, we propose DataDet, a cloud-edge collaborative framework that enables accurate and efficient distracted driving detection without relying on manually annotated training data.
+              On the edge side, DataDet distills task-relevant segmentation knowledge from a powerful segmentation model into a lightweight model, enabling it to mine informative high-risk events from continuous video streams and reduce redundant uploads.
+              On the cloud side, an agent-based workflow performs structured hand-centric annotation and verification to generate reliable pseudo-labels.
+              The resulting pseudo-labeled data are used to train a lightweight detector and redeploy it to the edge, thereby enabling efficient distracted driving recognition without manually annotated datasets.
+              Experiments on visible-light and infrared driving data validate the effectiveness of DataDet in mining high-value events, generating reliable pseudo labels, and training lightweight edge detectors.
+              The results further show that DataDet achieves accurate real-time distracted driving detection under limited annotation, bandwidth, and onboard computation resources.
               The demo video is available at: <a href="https://DataDet.github.io/">https://DataDet.github.io/</a>.
             </p>
           </div>
