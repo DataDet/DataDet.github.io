@@ -5,22 +5,22 @@
   <meta charset="utf-8">
 
   <!-- Meta tags for social media banners -->
-  <meta name="description" content="DataDet is a cloud-edge collaborative framework for high-quality distracted driving detection without manually annotated training data.">
-  <meta property="og:title" content="No Manual Annotation: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration"/>
-  <meta property="og:description" content="DataDet enables annotation-free distracted driving detection through edge-side event mining, cloud-side agent annotation, and real-time lightweight edge deployment."/>
+  <meta name="description" content="DataDet constructs training data from unlabeled driving streams and deploys lightweight detectors for real-time distracted driving recognition.">
+  <meta property="og:title" content="Manual Annotation Not Required: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration"/>
+  <meta property="og:description" content="DataDet constructs training data from unlabeled driving streams and deploys lightweight detectors for real-time distracted driving recognition."/>
   <meta property="og:image" content="static/images/social_preview.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <meta name="twitter:title" content="No Manual Annotation: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration">
-  <meta name="twitter:description" content="DataDet enables annotation-free distracted driving detection through cloud-edge collaboration.">
+  <meta name="twitter:title" content="Manual Annotation Not Required: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration">
+  <meta name="twitter:description" content="DataDet constructs training data from unlabeled driving streams and deploys lightweight detectors for real-time distracted driving recognition.">
   <meta name="twitter:image" content="static/images/social_preview.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="keywords" content="distracted driving detection, cloud-edge collaboration, pseudo-labeling, vision-language model, edge AI, YOLO, driver monitoring">
+  <meta name="keywords" content="Cloud-edge collaboration, Data stream mining, Vision Language Models, Distracted driving detection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DataDet: Annotation-Free Distracted Driving Detection via Cloud–Edge Collaboration</title>
+  <title>Manual Annotation Not Required: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/safe.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -156,17 +156,15 @@
           <div class="column has-text-centered">
 
             <h1 class="title is-1 publication-title">
-              No Manual Annotation: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration
+              Manual Annotation Not Required: High-Quality Distracted Driving Detection via Cloud–Edge Collaboration
             </h1>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Ke Chen<sup>1</sup>,</span>
-              <span class="author-block">Jiandian Zeng<sup>2</sup>,</span>
-              <span class="author-block">Entao Luo<sup>3</sup>,</span>
-              <span class="author-block">Zihao Peng<sup>2</sup>,</span>
-              <span class="author-block">Guo Li<sup>2</sup>,</span>
-              <span class="author-block">Jianxiong Guo<sup>2</sup>,</span>
-              <span class="author-block">Tian Wang<sup>4</sup></span>
+              <span class="author-block"><a href="https://orcid.org/0009-0006-5538-324X" target="_blank" rel="noopener noreferrer">Ke Chen</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://orcid.org/0000-0002-1349-8077" target="_blank" rel="noopener noreferrer">Jiandian Zeng</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://orcid.org/0000-0002-7925-2272" target="_blank" rel="noopener noreferrer">Entao Luo</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="https://orcid.org/0000-0002-0994-3297" target="_blank" rel="noopener noreferrer">Jianxiong Guo</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://orcid.org/0000-0003-4819-621X" target="_blank" rel="noopener noreferrer">Tian Wang</a><sup>4,5,6</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors affiliation-block">
@@ -181,19 +179,25 @@
               </span><br>
               <span class="author-block">
                 <sup>4</sup>Engineering Research Center of Cloud-Edge Intelligent Collaboration on Big Data, Ministry of Education, Beijing Normal University, Zhuhai, Guangdong, China
+              </span><br>
+              <span class="author-block">
+                <sup>5</sup>College of Computer and Data Science, Fuzhou University, China
+              </span><br>
+              <span class="author-block">
+                <sup>6</sup>School of Information Engineering, Changsha Medical University, Changsha 410219, China
               </span>
             </div>
 
             <div class="is-size-6 publication-authors email-block">
               <span class="author-block">
-                {kechen, pzh_cs, liguo}@mail.bnu.edu.cn,
+                kechen@mail.bnu.edu.cn,
                 {jiandian, jianxiongguo, tianwang}@bnu.edu.cn,
                 entaoluo@huse.edu.cn
               </span>
             </div>
 
-            <!-- Supplementary material button -->
-            <div class="column has-text-centered" style="margin-top: 1rem;">
+            <!-- Supplementary material button (temporarily hidden) -->
+            <div class="column has-text-centered is-hidden" hidden style="margin-top: 1rem;">
               <div class="publication-links">
 
                 <span class="link-block">
@@ -216,8 +220,8 @@
   </section>
 
 
-  <!-- Supplementary material PDF placed at the front -->
-  <section class="hero is-small is-light">
+  <!-- Supplementary material PDF (temporarily hidden) -->
+  <section class="hero is-small is-light is-hidden" hidden>
     <div class="hero-body">
       <div class="container is-widescreen">
         <div class="supplementary-highlight">
@@ -253,7 +257,17 @@
 
           <div class="content has-text-justified" style="font-size: 1.25rem; line-height: 1.75;">
             <p>
-In-vehicle driver monitoring is an important component of intelligent transportation systems, where distracted driving detection plays a key role in improving driving safety. Existing methods usually rely on supervised training with manually annotated datasets. However, continuous driving videos are massive and highly redundant, while distracted behaviors are sparse, fine-grained, and dependent on hand-object interactions. This makes large-scale manual annotation costly and limits the deployment of lightweight edge detectors. Although Vision Language Models (VLMs) can exploit unlabeled visual data, directly applying them to online in-vehicle inference is impractical due to high latency and computational cost. To address these challenges, we propose DataDet, a cloud-edge collaborative framework that enables accurate and efficient distracted driving detection without relying on manually annotated training data. On the edge side, DataDet distills task-relevant segmentation knowledge from a powerful segmentation model into a lightweight model, enabling it to mine informative high-risk events from continuous video streams and reduce redundant uploads. On the cloud side, an agent-based workflow performs structured hand-centric annotation and verification to generate reliable pseudo-labels. The resulting pseudo-labeled data are used to train a lightweight detector and redeploy it to the edge, thereby enabling efficient distracted driving recognition without manually annotated datasets. Experiments on RGB and IR driving data validate the effectiveness of DataDet in mining high-value events, generating reliable pseudo labels, and training lightweight edge detectors. The results further show that DataDet achieves accurate real-time distracted driving detection under limited annotation, bandwidth, and onboard computation resources.
+              Distracted driving detection is essential for in-vehicle monitoring, but training lightweight detectors typically requires costly manual annotations.
+              Continuous driving videos contain extensive redundancy, while distracted behaviors are sparse, fine-grained, and dependent on hand-object interactions.
+              Vision language models can exploit unlabeled data, yet their computational cost limits continuous online inference in vehicles.
+              We propose DataDet, a cloud-edge collaborative framework that constructs training data from unlabeled driving streams and deploys lightweight detectors for real-time recognition.
+              At the edge, task-relevant segmentation knowledge is transferred from a foundation model to a lightweight model, which identifies hand and steering-wheel regions and mines candidate high-risk events to reduce redundant uploads.
+              In the cloud, an agent performs structured hand-centric annotation and verification to generate reliable pseudo-labels.
+              These labels train a lightweight detector that is optimized and redeployed to the edge.
+              Experiments on visible-light and infrared driving data evaluate event mining, pseudo-label quality, detector performance, and deployment efficiency.
+              The results demonstrate effective training without manually annotated behavior labels, substantial upload reduction, and real-time edge inference.
+              Comparisons across annotators and detector architectures, iterative updates, and component ablations further examine the factors affecting data quality and recognition performance.
+              The demo video is available at: <a href="https://DataDet.github.io/">https://DataDet.github.io/</a>.
             </p>
           </div>
 
@@ -263,32 +277,38 @@ In-vehicle driver monitoring is an important component of intelligent transporta
   </section>
   <!-- End paper abstract -->
 
-  <!-- DataDet pipeline carousel -->
+  <!-- DataDet framework -->
   <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container is-fullhd">
-        <h2 class="title is-3">DataDet Pipeline</h2>
+        <h2 class="title is-3">DataDet Framework</h2>
 
         <figure class="pipeline-slide" style="margin-bottom: 2rem;">
           <img
             src="static/images/m2.png"
-            alt="Overview of the proposed DataDet cloud-edge framework."
+            alt="DataDet framework: SAM3-guided edge-side event mining, cloud-side hand-centric annotation and verification, and TensorRT-accelerated detector deployment."
           />
           <figcaption class="pipeline-caption">
-            Overview of the proposed DataDet cloud-edge system for distracted driving detection. The edge device monitors the in-cabin video and sends only high-risk candidate frames to the cloud. In the cloud, strong detectors and a VLM-based agent automatically annotate these frames and train a lightweight detector. The trained detector is then deployed back to the edge for real-time inference.
+            Overview of the DataDet framework. DataDet integrates SAM3-guided edge-side event mining, agent-driven cloud-side pseudo-label construction, and TensorRT-accelerated model deployment. It converts unlabeled driving video streams into verified hand-centric training data and enables real-time distracted driving detection without manual annotation.
           </figcaption>
         </figure>
 
       </div>
     </div>
   </section>
-  <!-- End DataDet pipeline carousel -->
+  <!-- End DataDet framework -->
 
   <!-- Edge mining video carousel -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Edge-side Distracted Frame Mining Using YOLO26n-Seg</h2>
+        <h2 class="title is-3">Edge-side High-Risk Event Mining with YOLO26n-seg</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            SAM3-generated pseudo-masks train a lightweight YOLO26n-seg model to identify the left hand, right hand, and steering wheel. A stabilized wheel reference and temporally averaged hand-state risk scores select candidate high-risk events for cloud annotation, reducing redundant uploads.
+          </p>
+        </div>
 
         <div id="mining-carousel" class="carousel results-carousel">
           <div class="item item-video1">
@@ -313,7 +333,13 @@ In-vehicle driver monitoring is an important component of intelligent transporta
   <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">RGB Scenario: Real-time Detection Demo of the Edge-side YOLO26n Model</h2>
+        <h2 class="title is-3">RGB Demo: Real-time Distracted Driving Detection with YOLO26n</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            A lightweight YOLO26n detector trained with verified cloud-generated pseudo-labels recognizes distracted driving behaviors in visible-light (RGB) video. TensorRT optimization supports real-time edge inference.
+          </p>
+        </div>
 
         <div id="rgb-carousel" class="carousel results-carousel">
           <div class="item item-video1">
@@ -344,7 +370,13 @@ In-vehicle driver monitoring is an important component of intelligent transporta
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">IR Scenario: Real-time Detection Demo of the Edge-side YOLO26n Model</h2>
+        <h2 class="title is-3">IR Demo: Real-time Distracted Driving Detection with YOLO26n</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            The infrared (IR) demo shows real-time distracted driving recognition with a lightweight YOLO26n detector trained on IR data using verified cloud-generated pseudo-labels. TensorRT optimization supports deployment on edge devices.
+          </p>
+        </div>
 
         <div id="ir-carousel" class="carousel results-carousel">
           <div class="item item-video1">
@@ -377,7 +409,7 @@ In-vehicle driver monitoring is an important component of intelligent transporta
         <div class="column is-8">
           <div class="content has-text-centered">
             <p>
-              This website presents supplementary materials and visual demonstrations for DataDet.
+              DataDet constructs training data from unlabeled driving streams for real-time distracted driving detection through cloud-edge collaboration.
             </p>
           </div>
         </div>
